@@ -1,0 +1,10 @@
+name: CustomAnvilRecipeRefactor
+version: ${project.version}
+main: io.tomoto.carr.CustomAnvilRecipeRefactor
+api-version: 1.16
+authors: [ Tomoto ]
+description: Custom Anvil Recipe Refactor
+
+commands:
+  anvil:
+    description: Open custom anvil recipe menu.
