@@ -8,3 +8,5 @@ description: Custom Anvil Recipe Refactor
 commands:
   anvil:
     description: Open custom anvil recipe menu.
+  izzel:
+    description: IzzelAliz!

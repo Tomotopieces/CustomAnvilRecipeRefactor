@@ -1,12 +1,10 @@
 package io.tomoto.carr.gui;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * 背包GUI
@@ -15,13 +13,8 @@ import org.bukkit.inventory.InventoryHolder;
  *
  * @author Tomoto
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class InventoryGui implements InventoryHolder {
-    private Inventory inventory;
-    private Integer inventorySize;
-    private String inventoryName;
+    protected final Inventory inventory;
 
     /**
      * 创建箱子菜单
@@ -30,8 +23,11 @@ public class InventoryGui implements InventoryHolder {
      * @param inventoryName 菜单名
      */
     public InventoryGui(Integer inventorySize, String inventoryName) {
-        this.inventorySize = inventorySize;
-        this.inventoryName = inventoryName;
-        this.inventory = Bukkit.createInventory(null, inventorySize, Component.text(inventoryName));
+        this.inventory = Bukkit.createInventory(this, inventorySize, Component.text(inventoryName));
+    }
+
+    @Override
+    public @NotNull Inventory getInventory() {
+        return inventory;
     }
 }
