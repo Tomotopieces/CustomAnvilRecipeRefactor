@@ -7,13 +7,13 @@ import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * 测试指令
  * <p>
- * 发送消息 IzzelAliz!
- * <p>
- * Created time: 2021/4/3 14:16
+ * 测试指令, 发送消息 IzzelAliz!
+ * </p>
  *
  * @author Tomoto
+ * @version 1.0
+ * @since 1.0 2021/4/3 14:16
  */
 public class IzzelCommandExecutor implements CommandExecutor {
 

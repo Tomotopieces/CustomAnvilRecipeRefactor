@@ -20,14 +20,17 @@
 
 ```
 |- CARR
-    |- command
-        |- completer
-        |- executor
-        |- registrar
-    |- event
-        |- listener
-        |- registrar
-    |- gui
-    |- entity
-    |- util
+    |- command      指令相关
+        |- completer    自动补全
+        |- executor     处理器
+        |- registrar    注册器
+    |- event        事件相关
+        |- listener     监听器 | 处理器
+        |- registrar    注册器
+    |- gui          箱子UI与按钮
+        |- page         箱子UI
+            |- impl         具体UI界面
+        |- button       物品按钮
+    |- entity       实体类
+    |- util         工具类
 ```

@@ -10,11 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 铁砧指令自动补全
  * <p>
- * Created time: 2021/4/3 14:10
+ * 铁砧指令自动补全
+ * </p>
  *
  * @author Tomoto
+ * @version 1.0
+ * @since 1.0 2021/4/3 14:10
  */
 public class AnvilCommandCompleter implements TabCompleter {
 

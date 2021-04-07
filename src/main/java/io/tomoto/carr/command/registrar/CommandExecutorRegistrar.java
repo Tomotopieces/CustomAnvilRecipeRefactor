@@ -11,11 +11,13 @@ import static io.tomoto.carr.util.Constant.COMMAND_ANVIL;
 import static io.tomoto.carr.util.Constant.COMMAND_IZZEL;
 
 /**
- * 指令监听类
  * <p>
- * Created time: 2021/4/3 11:49
+ * 指令监听类
+ * </p>
  *
  * @author Tomoto
+ * @version 1.0
+ * @since 1.0 2021/4/3 11:49
  */
 public class CommandExecutorRegistrar implements Consumer<JavaPlugin> {
 
