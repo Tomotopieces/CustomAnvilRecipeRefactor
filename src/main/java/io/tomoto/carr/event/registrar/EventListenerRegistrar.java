@@ -1,7 +1,7 @@
 package io.tomoto.carr.event.registrar;
 
-import io.tomoto.carr.event.listener.AnvilMainMenuClickEvent;
-import io.tomoto.carr.event.listener.RecipeCreationUIClickEvent;
+import io.tomoto.carr.event.listener.impl.AnvilMainMenuUIClickEvent;
+import io.tomoto.carr.event.listener.impl.RecipeCreationUIClickEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,7 +20,7 @@ public class EventListenerRegistrar implements Consumer<JavaPlugin> {
 
     @Override
     public void accept(JavaPlugin plugin) {
-        Bukkit.getPluginManager().registerEvents(new AnvilMainMenuClickEvent(), plugin);
+        Bukkit.getPluginManager().registerEvents(new AnvilMainMenuUIClickEvent(), plugin);
         Bukkit.getPluginManager().registerEvents(new RecipeCreationUIClickEvent(), plugin);
     }
 }

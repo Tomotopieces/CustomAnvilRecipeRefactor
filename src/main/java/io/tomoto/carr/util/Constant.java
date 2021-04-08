@@ -13,14 +13,30 @@ import org.bukkit.ChatColor;
  */
 public class Constant {
 
+    /**
+     * 插件前缀
+     */
     public static final String PLUGIN_PREFIX = "[CARR]";
 
+    /**
+     * 指令 anvil
+     */
     public static final String COMMAND_ANVIL = "anvil";
+    /**
+     * 指令 izzel
+     */
     public static final String COMMAND_IZZEL = "izzel";
 
-    public static final String MESSAGE_NOT_USER = ChatColor.RED + PLUGIN_PREFIX + " Only player can use this Command.";
-    public static final String MESSAGE_TOO_MANY_ARGUMENTS = ChatColor.RED + PLUGIN_PREFIX + " Too many arguments.";
+    /**
+     * 信息 非玩家
+     */
+    public static final String MESSAGE_NOT_USER = ChatColor.RED + PLUGIN_PREFIX + "Only player can use this Command.";
+    /**
+     * 信息 参数过多
+     */
+    public static final String MESSAGE_TOO_MANY_ARGUMENTS = ChatColor.RED + PLUGIN_PREFIX + "Too many arguments.";
 
     private Constant() {
     }
+
 }

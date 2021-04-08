@@ -35,5 +35,5 @@ public abstract class AbstractInventoryGui implements InventoryHolder {
     /**
      * @return 菜单格子层数
      */
-    protected abstract Integer getRows();
+    public abstract Integer getRows();
 }

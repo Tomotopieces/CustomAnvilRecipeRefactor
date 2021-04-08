@@ -1,10 +1,9 @@
-package io.tomoto.carr.event.listener;
+package io.tomoto.carr.event.listener.impl;
 
+import io.tomoto.carr.event.listener.UIClickEvent;
 import io.tomoto.carr.gui.page.impl.AnvilMainMenuUI;
 import io.tomoto.carr.gui.page.impl.RecipeCreationUI;
 import org.bukkit.entity.HumanEntity;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
 import static io.tomoto.carr.util.Constant.PLUGIN_PREFIX;
@@ -18,14 +17,16 @@ import static io.tomoto.carr.util.Constant.PLUGIN_PREFIX;
  * @version 1.0
  * @since 1.0 2021/4/3 15:43
  */
-public class AnvilMainMenuClickEvent implements Listener {
+public class AnvilMainMenuUIClickEvent implements UIClickEvent {
 
-    @EventHandler
-    public void onClick(InventoryClickEvent event) {
-        if (!(event.getInventory().getHolder() instanceof AnvilMainMenuUI)) { // 界面判断
-            return;
-        }
+    @Override
+    public boolean isEventMatch(InventoryClickEvent event) {
+        return event.getInventory().getHolder() instanceof AnvilMainMenuUI &&
+                event.getRawSlot() < AnvilMainMenuUI.ROWS * 9;
+    }
 
+    @Override
+    public void buttonMatch(InventoryClickEvent event) {
         HumanEntity player = event.getWhoClicked();
         switch (event.getSlot()) {
             case 0:

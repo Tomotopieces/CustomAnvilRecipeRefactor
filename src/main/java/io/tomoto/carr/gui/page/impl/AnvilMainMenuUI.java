@@ -4,7 +4,7 @@ import io.tomoto.carr.gui.page.AbstractInventoryGui;
 import org.bukkit.ChatColor;
 
 import static io.tomoto.carr.util.Constant.PLUGIN_PREFIX;
-import static io.tomoto.carr.util.PrefabButton.*;
+import static io.tomoto.carr.util.PrefabButtons.*;
 
 /**
  * <p>
@@ -16,17 +16,39 @@ import static io.tomoto.carr.util.PrefabButton.*;
  * @since 1.0 2021/4/3 15:28
  */
 public class AnvilMainMenuUI extends AbstractInventoryGui {
+    /**
+     * 界面行数
+     */
+    public static final int ROWS = 1;
+
+    /**
+     * 槽位  新建配方按钮
+     */
+    public static final int SLOT_CREATION_UI = 0;
+    /**
+     * 槽位  配方列表按钮
+     */
+    public static final int SLOT_RECIPE_LIST_UI = 2;
+    /**
+     * 槽位  退出按钮
+     */
+    public static final int SLOT_EXIT = 8;
+
+    public static final String UI_NAME = "Custom Anvil Recipe";
 
     public AnvilMainMenuUI() {
-        super(ChatColor.BLACK + PLUGIN_PREFIX);
+        super(ChatColor.BLACK + PLUGIN_PREFIX + UI_NAME);
+        setButtons();
+    }
 
-        this.inventory.setItem(0, BUTTON_CREATION_MENU);
-        this.inventory.setItem(2, BUTTON_RECIPE_LIST_MENU);
-        this.inventory.setItem(8, BUTTON_EXIT);
+    public void setButtons() {
+        this.inventory.setItem(SLOT_CREATION_UI, BUTTON_CREATION_UI);
+        this.inventory.setItem(SLOT_RECIPE_LIST_UI, BUTTON_RECIPE_LIST_UI);
+        this.inventory.setItem(SLOT_EXIT, BUTTON_EXIT);
     }
 
     @Override
-    protected Integer getRows() {
-        return 1;
+    public Integer getRows() {
+        return ROWS;
     }
 }
